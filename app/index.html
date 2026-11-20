@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTA VI Trophy Tracker &amp; Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <div class="masthead-title">
+        <h1>Leonida&nbsp;Legend</h1>
+        <p class="subtitle">A GTA VI platinum tracker &amp; guide &middot; 55 PS5 trophies</p>
+      </div>
+      <div class="progress-block" id="progressBlock">
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-nums" id="progressNums">0 / 55</div>
+      </div>
+    </header>
+
+    <nav class="controls" aria-label="Tracker controls">
+      <label class="ctl">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="ctl">Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="collectible">Collectible</option>
+          <option value="activity">Activity</option>
+          <option value="online">Online</option>
+          <option value="missable">Missable</option>
+        </select>
+      </label>
+      <label class="ctl check"><input type="checkbox" id="missableToggle"> Missable only</label>
+      <label class="ctl check"><input type="checkbox" id="spoilerToggle"> Spoiler mode</label>
+      <span class="ctl-spacer"></span>
+      <button type="button" id="exportBtn" class="btn">Export&nbsp;JSON</button>
+      <button type="button" id="importBtn" class="btn">Import&nbsp;JSON</button>
+      <input type="file" id="importFile" accept="application/json,.json" hidden>
+    </nav>
+
+    <nav class="paneltabs" aria-label="Panels">
+      <button type="button" class="tabbtn is-active" data-panel="checklist">Checklist</button>
+      <button type="button" class="tabbtn" data-panel="roadmap">Roadmap</button>
+      <button type="button" class="tabbtn" data-panel="sources">Sources</button>
+    </nav>
+
+    <main>
+      <section id="panel-checklist" class="panel is-active">
+        <p class="hint" id="resultHint"></p>
+        <ul class="trophy-list" id="trophyList"></ul>
+      </section>
+
+      <section id="panel-roadmap" class="panel">
+        <p class="roadmap-intro" id="roadmapIntro"></p>
+        <div id="roadmapStages"></div>
+      </section>
+
+      <section id="panel-sources" class="panel">
+        <div class="sources-block" id="sourcesText"><p>Loading sources&hellip;</p></div>
+      </section>
+    </main>
+
+    <footer class="sitefoot">
+      <p>Offline tracker &middot; data stays in your browser (localStorage) &middot; no official Rockstar art.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

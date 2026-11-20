@@ -1,0 +1,54 @@
+{
+  "game": "Grand Theft Auto VI",
+  "intro": "A 6-stage route to the platinum. Story stages follow the official chapters; stage 5 sweeps up side content; stage 6 is the 100% cleanup. Missable trophies are flagged next to the stage where their window closes.",
+  "stages": [
+    {
+      "number": 1,
+      "title": "Prologue & Chapter 1",
+      "chapters": ["Prologue", "Chapter 1"],
+      "focus": "Just play the opening and the full first chapter; the story trophies arrive on their own.",
+      "trophies": ["Just Like Paradise", "Paradise Lost"],
+      "missable_notes": "Just Like Paradise (Gone Fishing) and Paradise Lost (Chapter 1) are chapter-locked: they only pop while you play the prologue and Chapter 1. Neither can be earned later, so clear Chapter 1 before moving on."
+    },
+    {
+      "number": 2,
+      "title": "Chapter 2",
+      "chapters": ["Chapter 2"],
+      "focus": "Complete every Chapter 2 story mission; the two trophies unlock through the chapter.",
+      "trophies": ["T**s Ass Drug Money", "Trust"],
+      "missable_notes": "T**s Ass Drug Money (Chapter 2) and Trust (Breakfast Run) unlock only during Chapter 2. Play the chapter's missions to completion before Chapter 3 starts."
+    },
+    {
+      "number": 3,
+      "title": "Chapter 3",
+      "chapters": ["Chapter 3"],
+      "focus": "Finish the Chapter 3 story missions to collect the five chapter trophies.",
+      "trophies": ["Vice City, Baby!", "Break the Bank", "Family Matters", "DWNFALL", "Hi-Jacked", "Snow Storm"],
+      "missable_notes": "All six Chapter 3 trophies are chapter-locked, one per featured mission. They pop only as you complete Chapter 3, so do the whole chapter before Chapter 4."
+    },
+    {
+      "number": 4,
+      "title": "Chapter 4 & Final Mission",
+      "chapters": ["Chapter 4", "Final mission"],
+      "focus": "Complete Chapter 4 and then the final story mission to finish the campaign trophies.",
+      "trophies": ["Top Of The World, Ma", "You Gotta Know When to Get Off"],
+      "missable_notes": "Top Of The World, Ma (Chapter 4) and You Gotta Know When to Get Off (final mission) only unlock during those beats. There is no post-game replay of the epilogue, so clear both before the credits."
+    },
+    {
+      "number": 5,
+      "title": "Side Content - Strangers, Activities & Collectibles",
+      "chapters": ["Side content"],
+      "focus": "Knock out strangers & freaks strands, activities, challenges and collectibles. Do the choice- and heat-sensitive trophies here while the world is open.",
+      "trophies": ["Cunning Stunts", "Master of None", "The Shootist", "Top Fun", "Earn Cash, Not Kudos", "Baited My Tackle", "Stick Fiddler", "Road to Rehabilitation", "This Was No Boat Accident", "The Lone Rider", "Strangers & Freaks", "Supply & Demand", "Spin On This!", "Positive Mental Attitude", "Fair Game", "Don't Touch My Deck", "You WAiNKer!", "One Last Thing", "Hot Together", "Retail Therapy", "Whip It Good", "Gunslinger", "Catch Me If You Can", "Challenging Tank", "Sneakthief", "Maximum Withdrawal", "A Classic Blitz Play", "The Goodtime State", "Pest Control", "In The Beginning\u2026", "Capital Offense", "Let\u2019s Go Bowling", "Personal Best", "Actions Speak Louder", "Bad Luck, I Guess", "The Truth Is Out There", "Ten Pin", "Dime on the Dollar", "Treat Yo Self", "Little Boxes", "On the Spot"],
+      "missable_notes": "Retail Therapy, Catch Me If You Can and Actions Speak Louder are missable here: they depend on a live, un-busted wanted state or a story choice that does not repeat. Do them while side content is fully open."
+    },
+    {
+      "number": 6,
+      "title": "Cleanup & 100% Completion",
+      "chapters": ["Post-game"],
+      "focus": "Mop up anything left, then complete the campaign to 100% to close the gold, then the platinum.",
+      "trophies": ["A Long Road", "Vice Got a Price!"],
+      "missable_notes": "Nothing is missable at this stage; A Long Road (100%) and the platinum simply require everything else to be done."
+    }
+  ]
+}
