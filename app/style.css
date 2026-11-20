@@ -1,0 +1,257 @@
+/* app/style.css — dark navy theme for the Leonida Trophy Tracker. */
+
+:root {
+  --navy-950: #070c16;
+  --navy-900: #0b1220;
+  --navy-800: #101a2e;
+  --navy-700: #16233c;
+  --navy-600: #1f3152;
+  --line: #26395c;
+  --text: #dbe6f4;
+  --muted: #8aa0ba;
+  --accent: #4ea1ff;
+  --gold: #ffd166;
+  --silver: #cdd9e8;
+  --bronze: #d19c72;
+  --plat: #9fe0d0;
+  --missable: #ff8d7a;
+  --ok: #5fce9a;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--navy-950);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.45;
+  min-height: 100vh;
+}
+
+/* Masthead */
+.masthead {
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-900));
+  border-bottom: 1px solid var(--line);
+  padding: 26px 20px 18px;
+}
+.masthead-inner { max-width: 1080px; margin: 0 auto; }
+.masthead h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+.tagline { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 6px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 14px 20px 0;
+}
+.tab {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 9px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+}
+.tab:hover { color: var(--text); }
+.tab.is-active {
+  background: var(--navy-800);
+  color: #fff;
+  border-color: var(--line);
+  font-weight: 600;
+}
+
+/* Shell */
+.shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+.panel { display: none; }
+.panel.is-active { display: block; }
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  background: var(--navy-800);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin: 18px 0;
+}
+.progress-chip {
+  background: var(--navy-700);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 600;
+  color: var(--gold);
+}
+.ctl { color: var(--muted); font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; }
+.ctl select {
+  background: var(--navy-700);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 0.9rem;
+}
+.ctl.check { cursor: pointer; }
+.ctl.check input { accent-color: var(--accent); }
+.ctl.file input { max-width: 140px; font-size: 0.8rem; color: var(--muted); }
+.btn {
+  background: var(--accent);
+  color: #061120;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.btn:hover { filter: brightness(1.08); }
+
+/* Trophy table */
+.trophy-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--navy-800);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.trophy-table th {
+  text-align: left;
+  background: var(--navy-700);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.trophy-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  font-size: 0.93rem;
+}
+.trophy-table tr:last-child td { border-bottom: none; }
+.trophy-table tr.is-earned td { opacity: 0.62; }
+.col-earned { width: 44px; }
+.col-grade { width: 90px; }
+td.col-earned input { width: 18px; height: 18px; accent-color: var(--ok); cursor: pointer; }
+
+.trophy-name { font-weight: 700; color: #fff; }
+.trophy-desc { color: var(--muted); font-size: 0.87rem; margin-top: 2px; }
+
+.badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background: var(--navy-600);
+  color: var(--text);
+}
+.badge.platinum { background: #123f3a; color: var(--plat); }
+.badge.gold { background: #4a3a12; color: var(--gold); }
+.badge.silver { background: #2a3648; color: var(--silver); }
+.badge.bronze { background: #432f1c; color: var(--bronze); }
+.missable-flag {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--missable);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.guide { color: var(--text); white-space: pre-line; }
+.step { display: block; }
+.sources-line { margin-top: 6px; color: var(--muted); font-size: 0.85rem; }
+.sources-line a { color: var(--accent); text-decoration: none; }
+.sources-line a:hover { text-decoration: underline; }
+
+.spoiler .trophy-name, .spoiler .trophy-desc { color: transparent; text-shadow: 0 0 8px rgba(159, 224, 208, 0.55); }
+.spoiler .trophy-name::after, .spoiler .trophy-desc::after { content: ""; }
+
+.empty {
+  color: var(--muted);
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Roadmap */
+.roadmap-stage {
+  background: var(--navy-800);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.roadmap-stage h3 {
+  margin: 0 0 4px;
+  color: #fff;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.stage-num {
+  background: var(--navy-600);
+  color: var(--accent);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.roadmap-stage p { margin: 4px 0 10px; color: var(--muted); font-size: 0.9rem; }
+.missable-warn {
+  background: #331a18;
+  border: 1px solid #6b332a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 6px 0;
+  color: var(--missable);
+  font-size: 0.88rem;
+}
+.stage-trophies { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
+/* Sources */
+.prose { background: var(--navy-800); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; }
+.prose h2 { color: #fff; font-size: 1.25rem; margin-top: 0; }
+.prose h3 { color: var(--gold); font-size: 1rem; margin-bottom: 4px; }
+.prose p, .prose li { color: var(--text); font-size: 0.95rem; }
+.prose a { color: var(--accent); }
+.prose ul { padding-left: 20px; }
+.prose li { margin-bottom: 8px; }
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 18px;
+  background: var(--navy-900);
+}

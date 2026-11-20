@@ -1,0 +1,61 @@
+{
+  "title": "Roadmap to the Platinum",
+  "note": "Order the stages as listed; finish every missable item before the story finale (Stage 3).",
+  "stages": [
+    {
+      "id": 1,
+      "name": "Prologue → Chapter 1",
+      "description": "Play through the opening and Chapter 1, collecting the early mission trophies as they come.",
+      "trophies": [2, 3, 4, 8, 9],
+      "missable": []
+    },
+    {
+      "id": 2,
+      "name": "Chapters 2–3",
+      "description": "Keep the story moving through Chapters 2 and 3, grabbing story trophies and the early one-off events.",
+      "trophies": [5, 6, 10, 11, 12, 13, 44],
+      "missable": [
+        "In The Beginning… (cocktail on Ocean Beach) is a one-off side beat; do it while you are near the boardwalk."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Heists, Partners & Strangers",
+      "description": "The most missable block: stranger strands, partner activities and the finale. Do these before the story's end.",
+      "trophies": [7, 20, 22, 23, 24, 25, 26, 27, 29, 33, 34, 36, 45, 46, 47, 48],
+      "missable": [
+        "The stranger strand finals (Andy, Kenton, Billy, Randy, Tyrone) lock after the story — finish all 8 strands before the finale.",
+        "Fair Game (Bret's unique animal) must be hunted before his strand closes.",
+        "Hot Together and Retail Therapy need your partner in free roam; do them while the partner is available.",
+        "Gunslinger, Capital Offense and Let's Go Bowling are best done before post-game changes.",
+        "Personal Best and Actions Speak Louder are tied to story events that pass."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Activities & Minigames",
+      "description": "Clear the activity and minigame trophies: stunts, races, drone races, shooting gallery, arcade and odd encounters.",
+      "trophies": [15, 16, 17, 18, 19, 21, 28, 37, 38, 39, 49, 50, 51],
+      "missable": [
+        "Catch Me If You Can and Sneakthief are easiest in the early game before security is everywhere.",
+        "Challenging Tank, Bad Luck and The Truth Is Out There rely on encounters that can be skipped if you finish quickly."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Collectibles & Completion",
+      "description": "Collectibles, challenges, businesses and the 100% push.",
+      "trophies": [30, 31, 32, 35, 40, 41, 42, 43, 52, 53, 54, 55],
+      "missable": [
+        "A Classic Blitz Play (armored truck) is a random traffic event; keep an eye out for trucks while driving."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Platinum & 100%",
+      "description": "Reach 100% completion, then collect the platinum.",
+      "trophies": [14, 1],
+      "missable": []
+    }
+  ]
+}

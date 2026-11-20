@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Tracker — GTA VI Guide</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <h1>Leonida Trophy Tracker</h1>
+    <p class="tagline">Offline guide &amp; tracker for the 55 GTA VI PlayStation 5 trophies</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <button type="button" class="tab is-active" data-tab="checklist">Checklist</button>
+  <button type="button" class="tab" data-tab="roadmap">Roadmap</button>
+  <button type="button" class="tab" data-tab="sources">Sources</button>
+</nav>
+
+<main class="shell">
+
+  <section id="panel-checklist" class="panel is-active">
+    <div class="toolbar">
+      <div class="progress-chip" id="progress-chip" aria-live="polite">0 / 55 earned</div>
+
+      <label class="ctl">Grade
+        <select id="filter-grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+
+      <label class="ctl">Kind
+        <select id="filter-kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="activities">Activities</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="online">Online</option>
+        </select>
+      </label>
+
+      <label class="ctl check"><input type="checkbox" id="filter-missable"> Missable only</label>
+      <label class="ctl check"><input type="checkbox" id="filter-spoiler"> Spoiler mode</label>
+
+      <button type="button" id="btn-export" class="btn">Export</button>
+      <label class="ctl file">Import <input type="file" id="file-import" accept="application/json"></label>
+    </div>
+
+    <table class="trophy-table">
+      <thead>
+        <tr>
+          <th class="col-earned">Done</th>
+          <th class="col-trophy">Trophy</th>
+          <th class="col-grade">Grade</th>
+          <th class="col-guide">How to unlock</th>
+        </tr>
+      </thead>
+      <tbody id="trophy-rows"></tbody>
+    </table>
+    <p class="empty" id="check-empty" hidden>No trophies match the current filters.</p>
+  </section>
+
+  <section id="panel-roadmap" class="panel">
+    <div id="roadmap-root"></div>
+  </section>
+
+  <section id="panel-sources" class="panel">
+    <article id="sources-root" class="prose"></article>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Progress is saved in your browser. No data leaves this page; it works fully offline.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
