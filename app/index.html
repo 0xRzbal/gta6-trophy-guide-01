@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies.">
+<title>GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="brand">
+    <h1>GTA VI Trophy Guide</h1>
+    <p class="tagline">All 55 PS5 trophies · offline checklist, roadmap &amp; sources</p>
+  </div>
+  <div class="progress-card">
+    <span class="progress-number" id="progress-count">0</span>
+    <span class="progress-total">of 55 earned</span>
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button type="button" class="tab-btn is-active" data-tab="checklist">Checklist</button>
+  <button type="button" class="tab-btn" data-tab="roadmap">Roadmap</button>
+  <button type="button" class="tab-btn" data-tab="sources">Sources</button>
+</nav>
+
+<section class="panel is-active" data-panel="checklist">
+  <div class="filters">
+    <div class="filter-group">
+      <label for="filter-grade">Grade</label>
+      <select id="filter-grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="filter-kind">Kind</label>
+      <select id="filter-kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="online">Online</option>
+      </select>
+    </div>
+    <label class="toggle"><input type="checkbox" id="filter-missable"> Missable only</label>
+    <label class="toggle"><input type="checkbox" id="filter-spoiler"> Spoiler mode (hide story names)</label>
+    <div class="filter-group actions">
+      <button type="button" id="export-btn" class="btn">Export progress</button>
+      <label class="btn file-btn">Import progress<input type="file" id="import-input" accept="application/json"></label>
+      <button type="button" id="reset-btn" class="btn ghost">Reset</button>
+    </div>
+  </div>
+
+  <p class="hint" id="list-hint"></p>
+  <div class="trophy-list" id="trophy-list"></div>
+</section>
+
+<section class="panel" data-panel="roadmap">
+  <p class="intro">A recommended order to the platinum, built from the official trophy descriptions. Stages list the trophies they cover and warn about anything that can be missed.</p>
+  <div id="roadmap-list" class="roadmap"></div>
+</section>
+
+<section class="panel" data-panel="sources">
+  <div id="sources-md" class="sources"></div>
+</section>
+
+<footer class="site-footer">
+  <p>GTA VI Trophy Guide — an independent, unofficial tracker. Built for the make.fun gta6-trophy-guide-01 competition. No Rockstar assets used.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

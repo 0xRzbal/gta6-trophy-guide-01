@@ -1,0 +1,47 @@
+{
+  "intro": "A recommended order to the platinum, built from the official trophy descriptions.",
+  "stages": [
+    {
+      "stage": 1,
+      "title": "First Steps — Prologue & Chapter 1",
+      "summary": "Drop into Leonida and finish the opening story beats. Everything here is story-gated and unmissable.",
+      "missableWarnings": [],
+      "trophyIds": [2, 3]
+    },
+    {
+      "stage": 2,
+      "title": "Main Story — Chapters 2, 3 & 4",
+      "summary": "Advance the core storyline through the chapter missions. These unlock in order and cannot be missed.",
+      "missableWarnings": [],
+      "trophyIds": [4, 5, 6, 8, 9, 10, 11, 12, 13]
+    },
+    {
+      "stage": 3,
+      "title": "Final Story & Endgame Moments",
+      "summary": "The finale plus the special scripted moments: airport escape, partnership highlights, choices, retries, and the mystery chain.",
+      "missableWarnings": ["The 'second time's the charm' trophy wants you to fail once and succeed on the retry — it can be cleared any time."],
+      "trophyIds": [7, 37, 47, 48, 49, 50]
+    },
+    {
+      "stage": 4,
+      "title": "Strangers & Side Stories",
+      "summary": "Complete the stranger strands and side characters. Finishing a strand's final mission earns its trophy.",
+      "missableWarnings": ["The stranger finales (Andy, Kenton, Billy, Randy, Tyrone) can be locked out if you finish the story before clearing them — do these strands before the finale."],
+      "trophyIds": [20, 21, 22, 23, 24, 25, 26, 27, 29]
+    },
+    {
+      "stage": 5,
+      "title": "Activities & Events",
+      "summary": "Races, stunts, shooting range, fishing, arcade, meditation, robberies, and miscellaneous world events. Most overlap with normal play.",
+      "missableWarnings": ["Rob three shops back-to-back without dropping the wanted level — chain them on a single loop for an easy run."],
+      "trophyIds": [15, 16, 17, 18, 19, 28, 32, 33, 34, 36, 38, 39, 40, 41, 43, 44, 45, 46, 51, 52, 53]
+    },
+    {
+      "stage": 6,
+      "title": "Completionist Cleanup",
+      "summary": "The long-tail grind: 100% completion, collectible sets, WAiNK locations, vehicles, exploration, garage properties, and the platinum.",
+      "missableWarnings": [],
+      "trophyIds": [1, 14, 30, 31, 35, 42, 54, 55]
+    }
+  ]
+}

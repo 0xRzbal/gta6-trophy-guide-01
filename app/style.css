@@ -1,0 +1,251 @@
+/* ==========================================================================
+   GTA VI Trophy Guide — dark navy palette, no external fonts/images.
+   ========================================================================== */
+
+:root {
+  --navy-900: #070e1f;
+  --navy-800: #0b1d3a;
+  --navy-700: #12294f;
+  --navy-600: #1a3a6b;
+  --line: #223c66;
+  --ink: #d7e3f5;
+  --ink-dim: #8fa7c7;
+  --accent: #4fc3f7;
+  --accent-soft: #143a5c;
+  --platinum: #d8e4f5;
+  --gold: #f0c24a;
+  --silver: #b9c6d8;
+  --bronze: #cd8a4f;
+  --missable: #ff7d5c;
+  --ok: #61d6a4;
+  --panel: #0e2244;
+  --panel-2: #102a52;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--navy-900);
+  color: var(--ink);
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body { min-height: 100vh; display: flex; flex-direction: column; }
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 18px 24px;
+  background: linear-gradient(180deg, var(--navy-800), var(--navy-900));
+  border-bottom: 1px solid var(--line);
+}
+
+.brand h1 { margin: 0; font-size: 1.5rem; letter-spacing: .5px; color: #fff; }
+.tagline { margin: 4px 0 0; color: var(--ink-dim); font-size: .9rem; }
+
+.progress-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 16px;
+  min-width: 200px;
+  text-align: right;
+}
+.progress-number { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+.progress-total { color: var(--ink-dim); font-size: .9rem; margin-left: 6px; }
+.progress-bar {
+  margin-top: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--navy-700);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--ok));
+  transition: width .25s ease;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  padding: 12px 24px 0;
+  background: var(--navy-900);
+  border-bottom: 1px solid var(--line);
+}
+.tab-btn {
+  background: transparent;
+  color: var(--ink-dim);
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 9px 16px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-size: .95rem;
+}
+.tab-btn:hover { color: var(--ink); }
+.tab-btn.is-active {
+  background: var(--panel);
+  color: var(--accent);
+  border-color: var(--line);
+  font-weight: 600;
+}
+
+.panel { display: none; padding: 20px 24px; flex: 1; }
+.panel.is-active { display: block; }
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+}
+.filter-group { display: flex; flex-direction: column; gap: 4px; }
+.filter-group label { font-size: .78rem; color: var(--ink-dim); text-transform: uppercase; letter-spacing: .4px; }
+.filter-group select {
+  background: var(--navy-700);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: .9rem;
+}
+.toggle { display: flex; align-items: center; gap: 6px; font-size: .9rem; color: var(--ink); cursor: pointer; }
+.toggle input { accent-color: var(--accent); width: 16px; height: 16px; }
+.actions { flex-direction: row; gap: 8px; margin-left: auto; align-items: center; }
+
+.btn {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-size: .88rem;
+  cursor: pointer;
+}
+.btn:hover { background: var(--navy-600); }
+.btn.ghost { background: transparent; color: var(--ink-dim); }
+.file-btn { position: relative; overflow: hidden; }
+.file-btn input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+
+.hint { color: var(--ink-dim); font-size: .9rem; margin: 0 0 12px; }
+
+.trophy-list { display: flex; flex-direction: column; gap: 12px; }
+
+.trophy {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--ink-dim);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trophy.grade-platinum { border-left-color: var(--platinum); }
+.trophy.grade-gold { border-left-color: var(--gold); }
+.trophy.grade-silver { border-left-color: var(--silver); }
+.trophy.grade-bronze { border-left-color: var(--bronze); }
+
+.trophy-head { display: flex; gap: 12px; align-items: flex-start; }
+.trophy-check { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--ok); flex-shrink: 0; }
+.trophy-title { flex: 1; min-width: 0; }
+.trophy-name { font-size: 1.05rem; font-weight: 600; color: #fff; }
+.trophy-desc { color: var(--ink-dim); font-size: .9rem; margin-top: 2px; }
+.trophy-spoiler { color: var(--missable); font-style: italic; }
+
+.badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.badge {
+  font-size: .72rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  color: var(--ink-dim);
+  background: var(--navy-700);
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+.badge.grade { }
+.badge.grade-platinum { color: var(--platinum); border-color: var(--platinum); }
+.badge.grade-gold { color: var(--gold); border-color: var(--gold); }
+.badge.grade-silver { color: var(--silver); border-color: var(--silver); }
+.badge.grade-bronze { color: var(--bronze); border-color: var(--bronze); }
+.badge.missable { color: var(--missable); border-color: var(--missable); }
+.badge.hidden { color: var(--accent); border-color: var(--accent); }
+.badge.kind { color: var(--ink-dim); }
+
+.trophy-guide { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); }
+.trophy-guide .guide-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .4px; color: var(--ink-dim); }
+.trophy-guide p { margin: 6px 0 0; font-size: .92rem; white-space: pre-line; color: var(--ink); }
+.trophy-guide .sources-line { margin-top: 8px; font-size: .86rem; color: var(--accent); }
+.trophy-guide .sources-line a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+
+.roadmap { display: flex; flex-direction: column; gap: 16px; }
+.stage {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+}
+.stage-head { display: flex; align-items: center; gap: 12px; }
+.stage-num {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.stage-title { font-size: 1.05rem; font-weight: 600; color: #fff; margin: 0; }
+.stage-summary { margin: 6px 0 0; color: var(--ink-dim); font-size: .9rem; }
+.stage-warning {
+  margin-top: 10px;
+  background: rgba(255, 125, 92, .12);
+  border: 1px solid var(--missable);
+  color: var(--missable);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: .88rem;
+}
+.stage-trophies { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+.stage-trophy {
+  background: var(--navy-700);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: .84rem;
+  cursor: pointer;
+}
+.stage-trophy:hover { border-color: var(--accent); }
+.stage-trophy.earned { color: var(--ok); border-color: var(--ok); }
+
+.sources { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; }
+.sources h2 { color: #fff; font-size: 1.1rem; }
+.sources ol { padding-left: 20px; margin: 12px 0; }
+.sources li { margin-bottom: 10px; font-size: .94rem; }
+.sources a { color: var(--accent); word-break: break-all; }
+.sources p { color: var(--ink-dim); }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 14px 24px;
+  color: var(--ink-dim);
+  font-size: .82rem;
+  background: var(--navy-800);
+}
+
+@media (max-width: 720px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .progress-card { width: 100%; text-align: left; }
+  .actions { margin-left: 0; flex-wrap: wrap; }
+}
